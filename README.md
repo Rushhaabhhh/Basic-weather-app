@@ -2,6 +2,12 @@
 
 A minimal weather application built with React Native and Expo.
 
+## UI Images :
+<p align="center">
+  <img width="400" alt="Home Screen" src="https://github.com/user-attachments/assets/674b3bec-2f0f-4378-ab70-b9813782e2d7" />
+  <img width="400" alt="Weather Detail" src="https://github.com/user-attachments/assets/43cefe44-6ae4-4727-ba50-05d1c669bbbb" />
+</p>
+
 ## Requirements
 
 - Node.js 16+
