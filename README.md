@@ -1,50 +1,80 @@
-# Welcome to your Expo app 👋
+# Weather App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A minimal weather application built with React Native and Expo.
 
-## Get started
+## Requirements
 
-1. Install dependencies
+- Node.js 16+
+- Expo CLI
+- iOS Simulator or Android Emulator (or Expo Go app on physical device)
 
-   ```bash
-   npm install
-   ```
+## Dependencies
 
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```json
+{
+  "expo": "~51.0.0",
+  "react-native": "0.74.0",
+  "expo-router": "~3.5.0",
+  "react-native-reanimated": "~3.10.0",
+  "expo-linear-gradient": "~13.0.2",
+  "@expo/vector-icons": "^14.0.0",
+  "@expo-google-fonts/inter": "^0.2.3",
+  "expo-font": "~12.0.0"
+}
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Installation
 
-## Learn more
+1. Install dependencies:
+```bash
+npm install
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+2. Start the development server:
+```bash
+npx expo start
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+3. Run the app:
+- Press `a` for Android emulator
+- Press `i` for iOS simulator
+- Scan QR code with Expo Go app on your device
 
-## Join the community
+## Project Structure
 
-Join our community of developers creating universal apps.
+```
+app/
+├── _layout.tsx              # Root layout
+├── (tabs)/
+│   ├── _layout.tsx          # Tab navigation
+│   ├── index.tsx            # Home screen
+│   └── explore.tsx          # Explore screen
+└── modal.tsx                # Weather detail screen
+components/
+├── weather.api.ts           # API calls
+└── weather.types.ts         # TypeScript types
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## API
+
+Uses Open-Meteo API (no key required):
+- https://open-meteo.com/
+
+## Commands
+
+```bash
+# Start development server
+npx expo start
+
+# Start with cache cleared
+npx expo start -c
+
+# Run on Android
+npx expo start --android
+
+# Run on iOS
+npx expo start --ios
+
+# Build for production
+npx expo build
+```
